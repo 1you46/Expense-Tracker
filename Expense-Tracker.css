@@ -89,6 +89,7 @@
     font-size: 1.5rem;
     text-decoration: underline;
     margin-bottom: 1rem;
+    display: inline;
   }
   
   /* Item list */
@@ -161,4 +162,21 @@
       flex-direction: column;
       align-items: flex-start;
     }
+  }
+  #reset-items{
+    background-color: red;
+    border : none;
+    display: inline;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right : 20px;
+    border : 1px solid black;
+    border-radius: 5px;
+    margin-bottom : 10px;
+    margin-left : 10px;
+  }
+  #reset-items:hover{
+    background-color: rgb(249, 126, 126);
+    color: black;
   }
