@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense-Tracker</title><!--   Basic Layout
-        +------------------------------+
-        |       Expense Tracker        |
-        +------------------------------+
-        |  [ Name      ][Amount] [+]   |  ← Add Expense Form
-        +------------------------------+
-        |       Expense List:          |
-        |  - Coffee        $5   [x]    |
-        |  - Groceries     $20  [x]    |
-        |  - Movies        $8   [x]    |
-        +------------------------------+
-        |  💰 Total: $33               |
-        +------------------------------+-->
+    <title>Expense-Tracker</title>
     <link rel="stylesheet" href="Expense-Tracker.css">
 </head>
 <body>
@@ -38,6 +26,7 @@
 <main>
     <div id="title">Expense List:
     </div>
+    <button id="reset-items">Reset</button>
     <!--items, append items, using javascript-->
     <div id="items" class="third-container"> 
     </div>
@@ -47,6 +36,6 @@
     <div id="total-box">💰 Total :<p id="total">0</p></div>
     <aside><p id="aside">Made by Ali Ahmad, from 3rd july till X july</p></aside>
 </footer>
-<script src="Expense-Tracker.js">//conected to JavaScript code ("Expense-Tracker.js")</script>
+<script src="Expense-Tracker.js" defer>//conected to JavaScript code ("Expense-Tracker.js")</script>
 </body>
 </html>
