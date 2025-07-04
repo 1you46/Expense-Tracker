@@ -1,6 +1,7 @@
 let addItem = document.getElementById("add-btn");
 let total = document.getElementById("total");
 let expenseList = document.getElementById("items");
+let resetBtn = document.getElementById("reset-items")
 let totalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
 total.textContent = `${totalPrice} PKR`;
 let savedItems = JSON.parse(localStorage.getItem("items")) || [];
@@ -34,3 +35,10 @@ function appendNewItem(name, price) {
   listItem.appendChild(priceElem);
   expenseList.appendChild(listItem);
 }
+resetBtn.addEventListener("click", function(){
+ localStorage.removeItem("items");
+ localStorage.removeItem("totalPrice");
+ expenseList.innerHTML = "";
+ totalPrice = 0;
+ total.textContent = "0 PKR";
+})
