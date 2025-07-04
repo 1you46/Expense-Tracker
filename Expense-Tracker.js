@@ -1,35 +1,36 @@
-//Variables
-let addItem = document.getElementById("add-btn")
-let total = document.getElementById("total")
-let expenseList = document.getElementById("items")
-let itemName = "hello"
-let price = 0;
-let totalPrice = parseInt(total.textContent)
-function appendNewItem() {
-    let listItem = document.createElement("div")
-    listItem.classList.add("list-item")
-    let ListItemName = document.createElement("p")
-    ListItemName.classList.add("list-item-name")
-    ListItemName.textContent = `Name  :  ${itemName}`
-    let ListItemPrice = document.createElement("p")
-    ListItemPrice.classList.add("list-item-price")
-    ListItemPrice.textContent = `Price  :  PKR  ${price}`
-    listItem.appendChild(ListItemName)
-    listItem.appendChild(ListItemPrice)
-    expenseList.appendChild(listItem)
+let addItem = document.getElementById("add-btn");
+let total = document.getElementById("total");
+let expenseList = document.getElementById("items");
+let totalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
+total.textContent = `${totalPrice} PKR`;
+let savedItems = JSON.parse(localStorage.getItem("items")) || [];
+savedItems.forEach(item => appendNewItem(item.name, item.price));
+addItem.addEventListener("click", function () {
+  let nameInput = document.getElementById("name").value.trim();
+  let priceInput = parseFloat(document.getElementById("price").value);
+  if (nameInput === "" || isNaN(priceInput) || priceInput <= 0) {
+    alert("Please enter a valid name and price.");
+  }
+  appendNewItem(nameInput, priceInput);
+  totalPrice += priceInput;
+  total.textContent = `${totalPrice} PKR`;
+  localStorage.setItem("totalPrice", totalPrice);
+  let newItem = { name: nameInput, price: priceInput };
+  savedItems.push(newItem);
+  localStorage.setItem("items", JSON.stringify(savedItems));
+  document.getElementById("name").value = "";
+  document.getElementById("price").value = "";
+});
+function appendNewItem(name, price) {
+  let listItem = document.createElement("div");
+  listItem.classList.add("list-item");
+  let nameElem = document.createElement("p");
+  nameElem.classList.add("list-item-name");
+  nameElem.textContent = `Name: ${name}`;
+  let priceElem = document.createElement("p");
+  priceElem.classList.add("list-item-price");
+  priceElem.textContent = `Price: PKR ${price}`;
+  listItem.appendChild(nameElem);
+  listItem.appendChild(priceElem);
+  expenseList.appendChild(listItem);
 }
-addItem.addEventListener("click", function(){
-    let nameInput = document.getElementById("name").value
-    let priceInput = parseFloat(document.getElementById("price").value)
-    if (nameInput == "" || priceInput == 0 || isNaN(priceInput)){
-        alert("No name or price entered!")
-    } 
-    else{
-        priceInput
-        price = priceInput
-        itemName = nameInput
-        appendNewItem()
-        totalPrice += price
-        total.textContent = `${totalPrice} PKR`
-    }
-})
