@@ -125,6 +125,7 @@ aside{
     margin : 10px;
     border: 1px solid black;
     border-radius: 5px;
+    display : flex;
 }
 .list-item-name{
     position: relative;
