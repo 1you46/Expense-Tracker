@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense-Tracker</title>
+    <!--Link To StyleSheet ("Expense-Tracker.css")-->
     <link rel="stylesheet" href="Expense-Tracker.css">
 </head>
 <body>
 <header>
     <!--Heading and first container-->
-    <div id="heading" class="heading">Expense-Tracker</div>
+    <div id="heading" class="heading">Expense-Tracker / ده خرچی کاته</div>
     <!--Name box, and amount box and second ontainer-->
     <div id="Second-container">
+        <!--Name-->
         <div id="name-box" class="Second-container">
             <label for="name"></label>
-        Item Name :<input id="name" placeholder="Enter item name" type="text"></input>
+        Item Name / نوم :<input id="name" placeholder="Enter item name" type="text"></input><!--Input Name-->
         </div>
+        <!--Price-->
         <div id="price-box" class="Second-container">
             <label for="price"></label>
-        Price :<input id="price" placeholder="Enter Item Price" type="text"></input>
+        Price / قیمت :<input id="price" placeholder="Enter Item Price" type="text"></input><!--Input Price-->
         <button class="add-btn" id="add-btn">+</button><!--Add item-->
         </div>
     </div>
 </header>
 <main>
-    <div id="title">Expense List:
+    <!--Main-->
+    <div id="title">Expense List / خرچی لیسټ:
     </div>
-    <button id="reset-items">Reset</button>
+    <button id="reset-items">Reset / ترتیب</button><!--Reset-->
     <!--items, append items, using javascript-->
     <div id="items" class="third-container"> 
     </div>
 </main>
 <footer>
     <!--footer, and total box-->
-    <div id="total-box">💰 Total :<p id="total">0</p></div>
-    <aside><p id="aside">Made by Ali Ahmad, from 3rd july till X july</p></aside>
+    <div id="total-box">💰 Total / مجموعه :<p id="total">0</p></div>
+    <!--Aside-->
+    <aside><p id="aside">Made by Ali Ahmad, :)</p></aside>
 </footer>
 <script src="Expense-Tracker.js" defer>//conected to JavaScript code ("Expense-Tracker.js")</script>
 </body>
