@@ -11,6 +11,7 @@ addItem.addEventListener("click", function () {
   let priceInput = parseFloat(document.getElementById("price").value);
   if (nameInput === "" || isNaN(priceInput) || priceInput <= 0) {
     alert("Please enter a valid name and price.");
+    return;
   }
   appendNewItem(nameInput, priceInput);
   totalPrice += priceInput;
