@@ -1,27 +1,24 @@
-/* Colors */
+/*colors*/
 :root {
     --text-color: #CCC9DC;
     --bg-dark: #0C1821;
     --bg-footer: #1B2A41;
     --bg-main: #324A5F;
     --bg-list: #385E72;
-  }
-  
-  /* Base */
+  } 
+  /*Global Styling*/
   * {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
-    box-sizing: border-box;
+    box-sizing: border-box;  
     margin: 0;
     padding: 0;
   }
-  
   body {
     background-color: var(--bg-main);
     padding: 1rem;
   }
-  
-  /* Header */
+  /*Heading, Name Input, Price Input Styling*/
   #heading {
     text-align: center;
     background-color: var(--bg-dark);
@@ -30,15 +27,12 @@
     border-radius: 6px;
     margin-bottom: 1rem;
   }
-  
-  /* Input Section */
   #Second-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
   }
-  
   .Second-container {
     background-color: var(--bg-dark);
     padding: 1rem;
@@ -47,8 +41,6 @@
     flex: 1 1 300px;
     max-width: 500px;
   }
-  
-  /* Input fields */
   input[type="text"] {
     width: 70%;
     margin-top: 0.5rem;
@@ -58,8 +50,6 @@
     border-radius: 5px;
     color: var(--text-color);
   }
-  
-  /* Button */
   .add-btn {
     background-color: rgb(237, 82, 82);
     border: none;
@@ -69,13 +59,11 @@
     cursor: pointer;
     margin-left: 0.5rem;
   }
-  
   .add-btn:hover {
     background-color: rgb(249, 126, 126);
     color: black;
   }
-  
-  /* Main */
+  /*Main Styling*/
   main {
     background-color: #274472;
     margin-top: 2rem;
@@ -83,7 +71,7 @@
     border: 2px solid var(--bg-dark);
     border-radius: 6px;
   }
-  
+  /*List Title*/
   #title {
     text-align: center;
     font-size: 1.5rem;
@@ -91,8 +79,7 @@
     margin-bottom: 1rem;
     display: inline;
   }
-  
-  /* Item list */
+  /*List Items Styling*/
   #items {
     background-color: var(--bg-list);
     padding: 0.5rem;
@@ -100,7 +87,6 @@
     overflow-y: auto;
     border-radius: 6px;
   }
-  
   .list-item {
     background-color: var(--bg-dark);
     margin: 0.5rem 0;
@@ -111,12 +97,42 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
-  .list-item-name, .list-item-price {
+  .list-item-name, .list-item-price, .date {
     margin: 0.3rem;
   }
-  
-  /* Footer */
+  #reset-items{
+    background-color: red;
+    border : none;
+    display: inline;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right : 20px;
+    border : 1px solid black;
+    border-radius: 5px;
+    margin-bottom : 10px;
+    margin-left : 10px;
+  }
+  /*Reset ALl items*/
+  #reset-items:hover{
+    background-color: rgb(249, 126, 126);
+    color: black;
+  }
+  /*Remove button*/
+  .remove-btn{
+    background-color: rgb(237, 82, 82);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .remove-btn:hover{
+  background-color: rgb(249, 126, 126);
+    color: black;
+  }
+  /*Footer Styling*/
   footer {
     background-color: var(--bg-footer);
     margin-top: 2rem;
@@ -124,25 +140,23 @@
     border-radius: 6px;
     text-align: center;
   }
-  
+  /*Total amount*/
   #total-box {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
-  
   #total {
     color: yellow;
     display: inline;
     margin-left: 0.5rem;
   }
-  
+  /*Asides*/
   #aside {
     background-color: var(--bg-list);
     padding: 0.5rem;
     border-radius: 4px;
   }
-  
-  /* Responsive: Stack on smaller screens */
+  /*@media for better positioning on small screens*/
   @media (max-width: 600px) {
     #Second-container {
       flex-direction: column;
@@ -163,20 +177,4 @@
       align-items: flex-start;
     }
   }
-  #reset-items{
-    background-color: red;
-    border : none;
-    display: inline;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right : 20px;
-    border : 1px solid black;
-    border-radius: 5px;
-    margin-bottom : 10px;
-    margin-left : 10px;
-  }
-  #reset-items:hover{
-    background-color: rgb(249, 126, 126);
-    color: black;
-  }
+  
