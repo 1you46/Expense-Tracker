@@ -1,0 +1,179 @@
+/*colors*/
+:root {
+    --text-color: #CCC9DC;
+    --bg-dark: #0C1821;
+    --bg-footer: #1B2A41;
+    --bg-main: #324A5F;
+    --bg-list: #385E72;
+  } 
+  /*Global Styling*/
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: var(--bg-main);
+    padding: 1rem;
+  }
+  /*Heading, Name Input, Price Input Styling*/
+  #heading {
+    text-align: center;
+    background-color: var(--bg-dark);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  #Second-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .Second-container {
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 6px;
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  input[type="text"] {
+    width: 70%;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    background-color: var(--bg-main);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: var(--text-color);
+  }
+  .add-btn {
+    background-color: rgb(237, 82, 82);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .add-btn:hover {
+    background-color: rgb(249, 126, 126);
+    color: black;
+  }
+  /*Main Styling*/
+  main {
+    background-color: #274472;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 2px solid var(--bg-dark);
+    border-radius: 6px;
+  }
+  /*List Title*/
+  #title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline;
+  }
+  /*List Items Styling*/
+  #items {
+    background-color: var(--bg-list);
+    padding: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 6px;
+  }
+  .list-item {
+    background-color: var(--bg-dark);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .list-item-name, .list-item-price, .date {
+    margin: 0.3rem;
+  }
+  #reset-items{
+    background-color: red;
+    border : none;
+    display: inline;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right : 20px;
+    border : 1px solid black;
+    border-radius: 5px;
+    margin-bottom : 10px;
+    margin-left : 10px;
+  }
+  /*Reset ALl items*/
+  #reset-items:hover{
+    background-color: rgb(249, 126, 126);
+    color: black;
+  }
+  /*Remove button*/
+  .remove-btn{
+    background-color: rgb(237, 82, 82);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .remove-btn:hover{
+  background-color: rgb(249, 126, 126);
+    color: black;
+  }
+  /*Footer Styling*/
+  footer {
+    background-color: var(--bg-footer);
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+  /*Total amount*/
+  #total-box {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  #total {
+    color: yellow;
+    display: inline;
+    margin-left: 0.5rem;
+  }
+  /*Asides*/
+  #aside {
+    background-color: var(--bg-list);
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  /*@media for better positioning on small screens*/
+  @media (max-width: 600px) {
+    #Second-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .Second-container {
+      width: 90%;
+    }
+  
+    #items, main {
+      width: 100%;
+      left: 0;
+    }
+  
+    .list-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
